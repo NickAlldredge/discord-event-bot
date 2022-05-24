@@ -1,7 +1,7 @@
-const { app } = require('../firebase.js');
+const admin = require('../firebase.js');
 const { getDatabase, ref, child, get } = require("firebase/database");
 
-const dbRef = ref(getDatabase(app));
+const dbRef = ref(admin.database());
 async function readBirthday(userId) {
     try {
         const snapshot = await get(child(dbRef, `birthdays/${userId}`));

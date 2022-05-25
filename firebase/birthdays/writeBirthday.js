@@ -1,5 +1,5 @@
 const admin = require('../firebase.js');
-const { getDatabase, ref, set } = require("firebase/database");
+const { ref, set } = require("firebase/database");
 
 const db = admin.database();
 async function writeBirthday(userId, username, month, day) {
